@@ -84,7 +84,7 @@ body{
 }
 .chip img{ height:22px; width:auto; }
 
-/* ✅ Same base can image, but styled differently */
+
 .chip.bad img{
   filter: grayscale(1) brightness(0.18) contrast(1.2);
 }
