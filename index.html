@@ -10,7 +10,7 @@
   <div class="app">
     <header class="topbar">
       <div class="brand">
-        <!-- FIXED: correct path + existing file -->
+        <!-- correct path + existing file -->
         <img class="cw-logo" src="img/cw_logo-2.png" alt="charity: water" />
         <div class="brand-sub">Water Drop Rush</div>
       </div>
@@ -30,7 +30,7 @@
           <h2>How to play</h2>
           <div class="rule"><span class="chip good">💧</span> Tap clean drops for <strong>+10</strong></div>
 
-          <!-- FIXED: using existing can image; you can style it darker in CSS if you want -->
+          <!-- using existing can image you can style it darker  -->
           <div class="rule">
             <span class="chip bad">
               <img class="icon icon-pollution" src="img/water-can-transparent.png" alt="pollution" />
@@ -38,7 +38,7 @@
             Pollution costs <strong>-15</strong> and <strong>1 life</strong>
           </div>
 
-          <!-- FIXED: using existing can image; you can tint yellow in CSS -->
+          <!-- using existing can image you can tint yellow in CSS -->
           <div class="rule">
             <span class="chip can">
               <img class="icon icon-bonus" src="img/water-can-transparent.png" alt="bonus can" />
@@ -57,7 +57,7 @@
         <h1>Water Drop Rush</h1>
         <p>Collect clean water. Avoid pollution.</p>
 
-        <button class="btn primary" id="startBtn">Start</button>
+        <button class="btn primary" id="startBtn" type="button">Start</button>
 
         <div class="mini">
           <div>• Tap 💧 for +10</div>
@@ -75,11 +75,13 @@
         <h1 id="endTitle">Time’s up!</h1>
         <p id="endSummary"></p>
         <div class="row">
-          <button class="btn primary" id="replayBtn">Play Again</button>
+          <button class="btn primary" id="replayBtn" type="button">Play Again</button>
           <a class="btn" href="https://www.charitywater.org/" target="_blank" rel="noreferrer">Learn More</a>
         </div>
       </div>
     </div>
   </div>
 
-  <script s
+  <script src="./script.js" defer></script>
+</body>
+</html>

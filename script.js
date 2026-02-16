@@ -69,9 +69,9 @@ function loseLife(msg) {
 
 function randomType() {
   const r = Math.random();
-  if (r < 0.06) return "can";   
-  if (r < 0.28) return "bad";   
-  return "good";               
+  if (r < 0.06) return "can";   // ~6%
+  if (r < 0.28) return "bad";   // ~22%
+  return "good";                // ~72%
 }
 
 function spawn() {
@@ -87,17 +87,15 @@ function spawn() {
     el.appendChild(span);
   } else if (type === "bad") {
     const img = document.createElement("img");
-    img.src = CAN_IMG_SRC; 
+    img.src = CAN_IMG_SRC;
     img.alt = "pollution";
-    img.className = "drop-icon pollution"; 
-    // CSS hook
+    img.className = "drop-icon pollution";
     el.appendChild(img);
   } else {
     const img = document.createElement("img");
-    img.src = CAN_IMG_SRC; 
+    img.src = CAN_IMG_SRC;
     img.alt = "bonus";
     img.className = "drop-icon bonus";
-     // CSS hook
     el.appendChild(img);
   }
 
@@ -161,6 +159,21 @@ function start() {
   }, 1000);
 }
 
-startBtn.addEventListener("click", start);
-replayBtn.addEventListener("click", start);
+
+function bindStart(btn) {
+  if (!btn) return;
+  btn.addEventListener("click", start);
+  btn.addEventListener(
+    "pointerdown",
+    (e) => {
+      e.preventDefault();
+      start();
+    },
+    { passive: false }
+  );
+}
+
+bindStart(startBtn);
+bindStart(replayBtn);
+
 reset();
