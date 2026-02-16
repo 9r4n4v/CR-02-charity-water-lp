@@ -158,7 +158,7 @@ body{
 
 .drop img{ height: 26px; width:auto; }
 
-/* ✅ Same base can image, but styled differently */
+
 .drop.bad img{
   filter: grayscale(1) brightness(0.18) contrast(1.2);
 }
